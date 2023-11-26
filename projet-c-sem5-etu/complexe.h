@@ -5,7 +5,7 @@
 struct complexe {
     float reelle;
     float imaginaire;
-}
+};
 typedef struct complexe complexe_t;
 
 // Fonctions reelle et imaginaire
@@ -41,7 +41,7 @@ float imaginaire(complexe_t complexe);
  *    complexe : complexe_t*
  *    valeur : float
  */
-void set_reelle(complexe *complexe_t, float valeur);
+void set_reelle(complexe_t* complexe, float valeur);
 
 
 /**
@@ -53,7 +53,7 @@ void set_reelle(complexe *complexe_t, float valeur);
  *    complexe : complexe_t*
  *    valeur : float
  */
-void set_imaginaire(complexe *complexe_t, float valeur);
+void set_imaginaire(complexe_t* complexe, float valeur);
 
 /**
  * set_imaginaire
@@ -154,7 +154,7 @@ void multiplier(complexe_t* resultat, complexe_t gauche, complexe_t droite);
  * Pré-conditions : resultat non-null
  * Post-conditions : *resultat = op * facteur
  */
-void echelle(complexe_t* resultat, complexe_t op, double facteur);
+void echelle(complexe_t* resultat, complexe_t op, float facteur);
 
 /**
  * puissance
@@ -175,23 +175,40 @@ void puissance(complexe_t* resultat, complexe_t op, int exposant);
 /**
  * module_carre
  *
- * CONTRAT À COMPLETER
+ * retourne le module au carré du nombre complexe.
+ *
+ * Paramètres :
+ *   complexe            [in]  Complexe dont on veut calculer le module au carré 
+ *
+ * Pré-conditions : aucune
+ * Post-conditions : *resultat = | complexe | ^2
  */
-/** FONCTION À DÉCLARER **/
+float module_carre(complexe_t complexe);
 
 /**
  * module
  *
- * CONTRAT À COMPLETER
+ * retourne le module du nombre complexe.
+ *
+ * Paramètres :
+ *   complexe            [in]  Complexe dont on veut calculer le module
+ *
+ * Pré-conditions : aucune
+ * Post-conditions : *resultat = | complexe | 
  */
-/** FONCTION À DÉCLARER **/
+float module(complexe_t complexe);
 
 /**
  * argument
  *
- * CONTRAT À COMPLETER
+ * retourne l'argument du nombre complexe.
+ *
+ * Paramètres :
+ *   complexe            [in]  Complexe dont on veut calculer l'argument
+ * Pré-conditions : complexe /= 0
+ * Post-conditions : *resultat = arg(complexe)
  */
-/** FONCTION À DÉCLARER **/
+float argument(complexe_t complexe);
 
 
 #endif // COMPLEXE_H
