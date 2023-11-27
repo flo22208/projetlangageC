@@ -17,7 +17,14 @@
 #include "mandelbrot.h"
 
 int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
-    /** À COMPLÉTER **/
+    complexe_t zn = z0;
+    int i = 0; // Compteur du nombre d'itérations
+    while (module(zn) < seuil && i <= maxit) {
+        puissance(&zn, zn, 2);
+        ajouter(&zn, zn, c);
+        i++;
+    }
+    return i;
 }
 
 

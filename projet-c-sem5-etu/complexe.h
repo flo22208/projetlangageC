@@ -16,7 +16,7 @@ typedef struct complexe complexe_t;
  *
  *Parametre :
  *    complexe : complexe_t
- *Renvoie : un reelle 
+ *Renvoie : un reel 
  */
 float reelle(complexe_t complexe);
 
@@ -27,7 +27,7 @@ float reelle(complexe_t complexe);
  *
  *Parametre :
  *    complexe : complexe_t
- *Renvoie : un reelle 
+ *Renvoie : un reel
  */
 float imaginaire(complexe_t complexe);
 
